@@ -11,4 +11,6 @@ public class SingletonClass {
     public static SingletonClass getInstance() {
         return obj;
     }
+
+    // But the issue with the EagerInitialization is that the object creation is made static and it increases app load up time.
 }
