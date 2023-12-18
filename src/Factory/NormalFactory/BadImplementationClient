@@ -1,0 +1,17 @@
+// This is a bad practice because we are just making changes directly in the Client class, whenever there is a new type of
+    // Vehicle we would need to make another if else condition to cater that, that would violate the SRP and OCP, and client also
+    // has to recompile.
+
+//    public static Vehicle getVehicle(int tyres) {
+//       if (tyres == 2) {
+//           return new TwoWheeler();
+//       }
+//       else if (tyres == 4){
+//           return new FourWheeler();
+//       }
+//       return null;
+//    };
+
+    // Solution: Factory Design Pattern:
+    // Whenever there is a need to change the object type based on the user input or any kind of input, we use a factory method,
+    // inside a factory class, so the if else would be in factory class, and client wont be affected. See changes in VehicleFactory
